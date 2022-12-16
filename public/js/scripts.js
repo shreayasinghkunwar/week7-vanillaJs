@@ -141,6 +141,27 @@ cancelStroke.addEventListener('click', () => {
 })
 
 
+
+cancle.addEventListener('click', () => {
+    strokeBrush = false;
+    draw = false;
+    let uniqueSquares = _.uniq(array_of_square);
+    uniqueSquares.forEach(id => {
+        document.getElementById(id).style.backgroundColor = "white";
+    })
+    array_of_square = [];
+    for (let i = 1; i <= noOfPixel; i++) {
+        for (let j = 1; j <= noOfPixel; j++) {
+            square_index[i] = [];
+        }
+    }
+    data = [];
+    // console.log(array_of_square);
+    // console.log(data);
+})
+
+
+
 function createBoard() {
 
     for (let i = 1; i <= noOfPixel; i++) {
