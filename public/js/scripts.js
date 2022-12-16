@@ -64,6 +64,83 @@ window.addEventListener('keydown', (e) => {
     }
 })
 
+function ConvertDataToObject() {
+    data = [];
+    for (let i = 1; i <= noOfPixel; i++) {
+        for (let j = 1; j <= noOfPixel; j++) {
+            if (square_index[i][j] !== undefined) {
+
+                let obj = {
+                    row: i,
+                    column: j,
+                    backgroundcolor: square_index[i][j]
+                }
+                data.push(obj);
+            }
+        }
+    }
+}
+
+async function insertIntoDb() {
+    console.log('datas', data);
+
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+
+        },
+        body: JSON.stringify(data)
+    }
+    const response = await fetch('/api', options);
+
+    const resData = await response.json();
+    if (resData) {
+        alert('Saved successfully!');
+    }
+    console.log('Response', resData)
+
+}
+
+
+save.addEventListener('click', () => {
+
+    sortedArray.forEach(id => {
+        //row of square
+        if (id <= noOfPixel) {
+            let row = 1;
+            //column number of square
+            let column = id;
+            // console.log('col', row, column);
+            square_index[row][column] = document.getElementById(id).style.backgroundColor;
+        }
+        else {
+            let row = Math.floor(id / noOfPixel) + 1;
+            //column number of square
+            let column = Math.abs(id - ((row - 1) * noOfPixel));
+            square_index[row][column] = document.getElementById(id).style.backgroundColor;
+
+        }
+
+    });
+    ConvertDataToObject();
+    insertIntoDb();
+    //console.log(square_index);
+
+
+});
+
+//
+stroke.addEventListener('click', () => {
+    strokeBrush = true;
+
+})
+
+cancelStroke.addEventListener('click', () => {
+    strokeBrush = false;
+})
+
+
 function createBoard() {
 
     for (let i = 1; i <= noOfPixel; i++) {
