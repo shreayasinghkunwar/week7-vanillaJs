@@ -1,0 +1,94 @@
+.body{
+    padding: 0;
+    margin:0;
+
+}
+
+.container{
+    width: 100%;
+
+    
+}
+
+.flex-box{
+    display: flex ;
+    
+    width: 100%;
+   
+}
+
+.menubar{
+
+flex-grow: 0;
+background-color: rgb(248, 245, 245);
+padding: 1rem;
+border: solid black 1px;
+border-radius: 3px;
+}
+.drawboard{
+    
+    height: 1015px !important;
+    width: 1015px !important;
+    background-color: white;
+    
+}
+
+.rows{
+    display:flex;
+    gap:0.5rem;
+    padding: 15px;
+}
+.colorCell{
+    flex-grow: 1;
+    margin: auto;
+}
+
+.colorpicker{
+    border-radius: 8rem;
+     width: 35%;
+     height: 3rem;
+     cursor: pointer;
+
+}
+
+.color_key{
+    border:solid rgb(126, 122, 122) 2px;
+        border-radius: 1rem; 
+        width: 45%; 
+        height:3rem ;
+     text-align:center;
+     
+     padding: 0.03rem;
+     background-color: rgb(236, 232, 232);
+}
+p{
+   margin-bottom: 3rem;
+   font-size: 16px;
+   font-weight: 900;
+}
+
+tr, td{
+    border: 0px ;
+    margin: 0;
+    padding: 0;
+    height: 2px;
+    box-sizing: border-box;
+    
+}
+
+.pixel{
+   height: 2px !important;
+   width: 2px !important;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table{
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+    height: 1015px !important;
+    width: 1015px !important;
+
+}

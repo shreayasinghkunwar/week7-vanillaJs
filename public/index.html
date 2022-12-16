@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>paint board</title>
+       <link rel="stylesheet" href="./style/style.css"  />
+       <script type = "text/JavaScript" 
+   src = "https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js">
+</script>
+    </head>
+    <body>
+      <header class="flex-box" style="background-color: #544a1352 ;padding: 0; gap: 2">
+        <div class="rows" >
+          <div class="colorCell" >
+          <div class="colorpicker" 
+          style="background-color:red; width: 30px; height: 30px;">
+          
+          </div></div>
+          <div class="colorCell">
+              <div class="color_key" style="width: 40px; height: 30px;
+              border-radius:3px;padding: 5px; " >
+             <p style="  padding-bottom: 30px;margin-top: 5px;"> 1</p>
+              </div>
+          </div>
+        </div>
+
+        <div class="rows" >
+          <div class="colorCell" >
+          <div class="colorpicker" 
+          style="background-color:black; width: 30px; height: 30px;">
+          
+          </div></div>
+          <div class="colorCell">
+              <div class="color_key" style="width: 40px; height: 30px;
+              border-radius:3px;padding: 5px; " >
+             <p style="  padding-bottom: 30px;margin-top: 5px;"> 2</p>
+              </div>
+          </div>
+        </div>
+        <div class="rows" >
+          <div class="colorCell" >
+          <div class="colorpicker" 
+          style="background-color:blueviolet; width: 30px; height: 30px;">
+          
+          </div></div>
+          <div class="colorCell">
+              <div class="color_key" style="width: 40px; height: 30px;
+              border-radius:3px;padding: 5px; " >
+             <p style="  padding-bottom: 30px;margin-top: 5px;"> 3</p>
+              </div>
+          </div>
+        </div>
+        <div class="rows" >
+          <div class="colorCell" >
+          <div class="colorpicker" 
+          style="background-color:yellow; width: 30px; height: 30px;">
+          
+          </div></div>
+          <div class="colorCell">
+              <div class="color_key" style="width: 40px; height: 30px;
+              border-radius:3px;padding: 5px; " >
+             <p style="  padding-bottom: 30px;margin-top: 5px;"> 4</p>
+              </div>
+          </div>
+        </div>
+        <div class="rows" >
+          <div class="colorCell" >
+          <div class="colorpicker" 
+          style="background-color:green; width: 30px; height: 30px;">
+          
+          </div></div>
+          <div class="colorCell">
+              <div class="color_key" style="width: 40px; height: 30px;
+              border-radius:3px;padding: 5px; " >
+             <p style="  padding-bottom: 30px;margin-top: 5px;"> 5</p>
+              </div>
+          </div>
+        </div>
+        <div class="rows" >
+          <div class="colorCell" >
+          <div class="colorpicker" 
+          style="background-color:pink; width: 30px; height: 30px;">
+          
+          </div></div>
+          <div class="colorCell">
+              <div class="color_key" style="width: 40px; height: 30px;
+              border-radius:3px;padding: 5px; " >
+             <p style="  padding-bottom: 30px;margin-top: 5px;"> 6</p>
+              </div>
+          </div>
+        </div>
+        <div class="rows" >
+          <div  style="flex-grow: 1;margin-left:10px;margin-top: 8px; " >
+          <button class="savebtn" style="width: 95%; height: 30px;">Save</button></div>
+          <div style="flex-grow: 1;margin-top: 8px;">
+              <button  class="canclebtn" style="width: 95%; height: 30px; "> Cancel</button></div>
+          
+        </div>
+        <div class="rows" >
+          <div  style="flex-grow: 1;margin-left:10px;margin-top: 8px; " >
+          <button class="strokebtn" style="width: 105%; height: 40px;">Stroke</button></div>
+          <div style="flex-grow: 1;margin-top: 8px;">
+              <button  class="cancelStroke" style="width: 95%; height: 40px; "> Cancel Stroke</button></div>
+          
+        </div>
+        
+      </header><br>
+        <section class="container">
+        <div class="flex-box" style="margin-left: 25rem;">
+          <div style="border: 1px solid black;">
+        <table class="drawboard">   
+     
+    
+</table>
+</div>          
+      
+        </div>
+   
+        </section>
+
+        <script type="module" src="./js/scripts.js"> </script>
+    </body>
+</html>
